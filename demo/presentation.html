@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Cloud Demo Presentation</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #1a1a1a; color: white; overflow-x: hidden; }
+        .slide { min-height: 100vh; padding: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+        .slide1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .slide2 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .slide3 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .slide4 { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+        .slide5 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+        
+        h1 { font-size: 4rem; margin-bottom: 20px; text-align: center; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        h2 { font-size: 2.5rem; margin-bottom: 30px; text-align: center; }
+        h3 { font-size: 2rem; margin-bottom: 20px; }
+        
+        .architecture-visual { display: grid; grid-template-columns: 1fr 100px 1fr; gap: 20px; align-items: center; max-width: 1000px; margin: 40px 0; }
+        .cloud-box { background: rgba(255,255,255,0.2); padding: 30px; border-radius: 15px; backdrop-filter: blur(10px); }
+        .service-item { background: rgba(255,255,255,0.3); margin: 10px 0; padding: 15px; border-radius: 8px; font-size: 1.1rem; }
+        .connection { text-align: center; font-size: 3rem; }
+        
+        .demo-flow { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; max-width: 1000px; margin: 40px 0; }
+        .flow-step { background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; text-align: center; backdrop-filter: blur(10px); }
+        .step-icon { font-size: 3rem; margin-bottom: 10px; }
+        
+        .benefits-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; max-width: 800px; margin: 40px 0; }
+        .benefit-box { background: rgba(255,255,255,0.2); padding: 25px; border-radius: 15px; text-align: center; backdrop-filter: blur(10px); }
+        .benefit-icon { font-size: 4rem; margin-bottom: 15px; }
+        
+        .metrics-display { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; max-width: 800px; margin: 40px 0; }
+        .metric-box { background: rgba(255,255,255,0.2); padding: 20px; border-radius: 10px; text-align: center; backdrop-filter: blur(10px); }
+        .metric-number { font-size: 2.5rem; font-weight: bold; margin-bottom: 10px; }
+        
+        .navigation { position: fixed; bottom: 20px; right: 20px; }
+        .nav-btn { background: rgba(255,255,255,0.3); border: none; color: white; padding: 10px 20px; margin: 5px; border-radius: 25px; cursor: pointer; backdrop-filter: blur(10px); }
+        .nav-btn:hover { background: rgba(255,255,255,0.5); }
+        
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .animate { animation: fadeInUp 0.8s ease-out; }
+    </style>
+</head>
+<body>
+    <!-- Slide 1: Title -->
+    <div class="slide slide1" id="slide1">
+        <h1 class="animate">🚀 Multi-Cloud Architecture</h1>
+        <h2 class="animate">AWS + Azure Integration Demo</h2>
+        <p style="font-size: 1.5rem; text-align: center; margin-top: 30px;" class="animate">
+            Showcasing seamless interoperability between cloud providers
+        </p>
+    </div>
+
+    <!-- Slide 2: Architecture Overview -->
+    <div class="slide slide2" id="slide2">
+        <h2 class="animate">🏗️ System Architecture</h2>
+        <div class="architecture-visual animate">
+            <div class="cloud-box">
+                <h3>☁️ AWS Services</h3>
+                <div class="service-item">🌐 API Gateway</div>
+                <div class="service-item">⚡ Lambda Functions</div>
+                <div class="service-item">🗄️ DynamoDB</div>
+                <div class="service-item">📦 S3 Storage</div>
+            </div>
+            <div class="connection">↔️</div>
+            <div class="cloud-box">
+                <h3>☁️ Azure Services</h3>
+                <div class="service-item">⚡ Azure Functions</div>
+                <div class="service-item">🗃️ SQL Database</div>
+                <div class="service-item">📨 Service Bus</div>
+                <div class="service-item">📧 Notifications</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Demo Workflow -->
+    <div class="slide slide3" id="slide3">
+        <h2 class="animate">🎮 Demo Workflow</h2>
+        <div class="demo-flow animate">
+            <div class="flow-step">
+                <div class="step-icon">📦</div>
+                <h4>1. Create Products</h4>
+                <p>AWS DynamoDB Storage</p>
+            </div>
+            <div class="flow-step">
+                <div class="step-icon">🛒</div>
+                <h4>2. Place Order</h4>
+                <p>AWS Lambda Processing</p>
+            </div>
+            <div class="flow-step">
+                <div class="step-icon">💳</div>
+                <h4>3. Process Payment</h4>
+                <p>Azure Functions</p>
+            </div>
+            <div class="flow-step">
+                <div class="step-icon">📧</div>
+                <h4>4. Send Notifications</h4>
+                <p>Azure Services</p>
+            </div>
+            <div class="flow-step">
+                <div class="step-icon">📊</div>
+                <h4>5. Sync Analytics</h4>
+                <p>Cross-Cloud Data</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Key Benefits -->
+    <div class="slide slide4" id="slide4">
+        <h2 class="animate">✨ Key Benefits</h2>
+        <div class="benefits-grid animate">
+            <div class="benefit-box">
+                <div class="benefit-icon">🚫</div>
+                <h3>No Vendor Lock-in</h3>
+                <p>Freedom to choose best services from each provider</p>
+            </div>
+            <div class="benefit-box">
+                <div class="benefit-icon">💰</div>
+                <h3>Cost Optimization</h3>
+                <p>Leverage competitive pricing across clouds</p>
+            </div>
+            <div class="benefit-box">
+                <div class="benefit-icon">🔄</div>
+                <h3>High Availability</h3>
+                <p>Multi-cloud redundancy and failover</p>
+            </div>
+            <div class="benefit-box">
+                <div class="benefit-icon">⚡</div>
+                <h3>Best Performance</h3>
+                <p>Optimal service selection for each task</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Performance Metrics -->
+    <div class="slide slide5" id="slide5">
+        <h2 class="animate">📊 Performance Metrics</h2>
+        <div class="metrics-display animate">
+            <div class="metric-box">
+                <div class="metric-number">< 200ms</div>
+                <div>API Response</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-number">99.9%</div>
+                <div>Availability</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-number">1000+</div>
+                <div>Requests/sec</div>
+            </div>
+            <div class="metric-box">
+                <div class="metric-number">< 100ms</div>
+                <div>Cross-Cloud</div>
+            </div>
+        </div>
+        <h3 class="animate" style="margin-top: 40px;">🎯 Ready for Production!</h3>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn" onclick="previousSlide()">← Previous</button>
+        <button class="nav-btn" onclick="nextSlide()">Next →</button>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 5;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach(slide => slide.style.display = 'none');
+            document.getElementById(`slide${n}`).style.display = 'flex';
+            
+            // Add animation class to elements
+            setTimeout(() => {
+                const elements = document.querySelectorAll(`#slide${n} .animate`);
+                elements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.style.animation = 'fadeInUp 0.8s ease-out';
+                    }, index * 200);
+                });
+            }, 100);
+        }
+
+        function nextSlide() {
+            currentSlide = currentSlide < totalSlides ? currentSlide + 1 : 1;
+            showSlide(currentSlide);
+        }
+
+        function previousSlide() {
+            currentSlide = currentSlide > 1 ? currentSlide - 1 : totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') nextSlide();
+            if (e.key === 'ArrowLeft') previousSlide();
+        });
+
+        // Initialize
+        showSlide(1);
+    </script>
+</body>
+</html>
